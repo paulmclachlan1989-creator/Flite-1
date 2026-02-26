@@ -630,7 +630,7 @@ function addConc(){
 
 
 async function callClaude(prompt,maxTokens=2000){
-  const ANTHROPIC_KEY='YOUR_API_KEY_HERE';
+  const ANTHROPIC_KEY='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';
   const r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',
     headers:{'Content-Type':'application/json','x-api-key':ANTHROPIC_KEY,'anthropic-version':'2023-06-01'},
     body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:maxTokens,messages:[{role:'user',content:prompt}]})});
